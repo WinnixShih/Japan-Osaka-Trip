@@ -16,7 +16,7 @@
                     <a href="#!" class="logo">
                         <h1>Japan</h1>
                     </a>
-                    <ul class="nav">
+                    <ul id="popup-menu" class="nav">
                         <li class="nav-item">
                             <a href="#Osaka" class="nav-link">Osaka</a>
                         </li>
@@ -29,7 +29,16 @@
                         <li class="nav-item">
                             <a href="#Contact" class="nav-link">Contact</a>
                         </li>
+                        <a href="#!" class="close-btn">
+                            <span></span>
+                            <span></span>
+                        </a>
                     </ul>
+                    <a href="#popup-menu" class="menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
 
                 </div>
             </div>
@@ -62,7 +71,7 @@
                             </div>
                             <div class="col-12">
                                 <div class="img-container">
-                                    <div class="image" style="background-image: url('./img/map/大阪景點地圖.jpg');"></div>
+                                    <div class="image map" style="background-image: url('./img/map/大阪景點地圖.jpg');"></div>
                                 </div>
                             </div>
                         </div>
@@ -74,7 +83,7 @@
                         <div class="row">
                             <div class="attrc-place">
                                 <div class="attrc right">
-                                    <div class="col-6">
+                                    <div class="col-lg-6 col-md-12 ">
                                         <div class="attrc-prev">
                                             <h4>大阪城天守閣</h4>
                                         </div>
@@ -82,7 +91,7 @@
                                             <p>大阪城是日本著名的城堡之一，其天守閣是其主要建築物。天守閣內有歷史展示，介紹了大阪城的歷史和豐臣秀吉的生平。從天守閣頂層可以俯瞰大阪市的美麗景色，是一個不可錯過的拍照地點。</p>
                                         </div>
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-lg-6 col-md-12">
                                         <div class="img-container">
                                             <div class="image" style="background-image: url('./img/attraction/大阪城天守閣.jpg'); background-position: center;"></div>
                                         </div>
@@ -91,12 +100,12 @@
                             </div>
                             <div class="attrc-place">
                                 <div class="attrc left">
-                                    <div class="col-6">
+                                    <div class="col-lg-6 col-md-12">
                                         <div class="img-container">
                                             <div class="image" style="background-image: url('./img/attraction/道頓堀.jpg'); background-position: center;"></div>
                                         </div>
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-lg-6 col-md-12">
                                         <div class="attrc-prev">
                                             <h4>道頓堀</h4>
                                         </div>
@@ -108,7 +117,7 @@
                             </div>
                             <div class="attrc-place">
                                 <div class="attrc right">
-                                    <div class="col-6">
+                                    <div class="col-lg-6 col-md-12">
                                         <div class="attrc-prev">
                                             <h4>難波八阪神社</h4>
                                         </div>
@@ -116,7 +125,7 @@
                                             <p>這是一個比較小但非常獨特的神社，因其巨大獅子頭形狀的舞台而著名。這個神社供奉的是武運和商業繁榮之神，是當地居民常來祈求保佑的地方。這裡的建築風格非常獨特，非常適合拍照留念。</p>
                                         </div>
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-lg-6 col-md-12">
                                         <div class="img-container">
                                             <div class="image" style="background-image: url('./img/attraction/難波八阪神社.jpg'); background-position: center 40%;"></div>
                                         </div>
@@ -125,12 +134,12 @@
                             </div>
                             <div class="attrc-place">
                                 <div class="attrc left">
-                                    <div class="col-6">
+                                    <div class="col-lg-6 col-md-12">
                                         <div class="img-container">
                                             <div class="image" style="background-image: url('./img/attraction/四天王寺.jpg'); background-position: center 77%;"></div>
                                         </div>
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-lg-6 col-md-12">
                                         <div class="attrc-prev">
                                             <h4>四天王寺</h4>
                                         </div>
@@ -142,7 +151,7 @@
                             </div>
                             <div class="attrc-place">
                                 <div class="attrc right">
-                                    <div class="col-6">
+                                    <div class="col-lg-6 col-md-12">
                                         <div class="attrc-prev">
                                             <h4>新世界本通商店街</h4>
                                         </div>
@@ -150,7 +159,7 @@
                                             <p>新世界本通商店街是一個充滿昭和時代氛圍的街區，有很多小吃攤和古老的商店。這裡有許多地道的大阪美食，如串炸和大阪燒。新世界的氛圍非常熱鬧，讓人感受到濃厚的大阪風情。</p>
                                         </div>
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-lg-6 col-md-12">
                                         <div class="img-container">
                                             <div class="image" style="background-image: url('./img/attraction/新世界本通商店街.jpg'); background-position: center 10%;"></div>
                                         </div>
@@ -161,7 +170,6 @@
                     </div>
                     <!-- end attractions -->
                 </div>
-
             </div>
             <!-- end Osaka -->
 
@@ -171,6 +179,23 @@
                     <div class="city">
                         <h2 class="city-title">京都</h2>
                     </div>
+                    <!-- start map -->
+                    <div class="hero map">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="map-prev">
+                                    <h3>周邊地圖</h3>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="img-container">
+                                    <div class="image map" style="background-image: url('./img/map/京都景點.jpg');"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end map -->
+
                 </div>
             </div>
             <!-- end Kyoto -->
