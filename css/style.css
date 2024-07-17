@@ -48,13 +48,19 @@ a{
     display: block;
     clear: both;
 }
-
-.col-lg-6, .col-lg-12,
-.col-md-6, .col-md-12
+.col-sm-3, .col-sm-4 .col-sm-6, .col-sm-12,
+.col-lg-3, .col-lg-4 .col-lg-6, .col-lg-12,
+.col-md-3, .col-md-4 .col-md-6, .col-md-12
 {
     /* border: solid 1px rgb(0, 0, 255); */
     float: left;
     padding: 0 16px;
+}
+.col-lg-3{
+    width: 25%;
+}
+.col-lg-4{
+    width: 33.333%;
 }
 .col-lg-6{
     width: 50%;
@@ -63,11 +69,39 @@ a{
     width: 100%;
 }
 @media screen and (max-width: 768px){
-    .col-md-12{
-        width: 100%;
+    .col-md-3{
+        width: 25%;
+        margin-bottom: 8px;
+    }
+    .col-md-4{
+        width: 33.333%;
+        margin-bottom: 8px;
     }
     .col-md-6{
         width: 50%;
+        margin-bottom: 8px;
+    }
+    .col-md-12{
+        width: 100%;
+        margin-bottom: 8px;
+    }
+}
+@media screen and (max-width: 540px){
+    .col-sm-3{
+        width: 25%;
+        margin-bottom: 8px;
+    }
+    .col-sm-4{
+        width: 33.333%;
+        margin-bottom: 8px;
+    }
+    .col-sm-6{
+        width: 50%;
+        margin-bottom: 8px;
+    }
+    .col-sm-12{
+        width: 100%;
+        margin-bottom: 8px;
     }
 }
 
@@ -226,7 +260,7 @@ a{
     background-position: center 65%;
 }
 .jumbotron h2{
-    color: rgba(255, 174, 66, 0.85);
+    color: rgba(255, 174, 66, 1);
     width: 320px;
     height: 320px;
     margin: 0 auto;
@@ -258,17 +292,21 @@ a{
 /* map */
 .hero .city{
     text-align: center;
+    background-color: rgba(231,172,207,0.7);
+    margin: 0 -16px;
+    border-left: solid 8px rgba(231,172,207,1);
+    border-right: solid 8px rgba(231,172,207,1);
 }
-.city-title{
+.big-title{
     /* border: solid 1px orange; */
     font-size: 36px;
     margin: 0 auto;
     margin-top: 24px;
     text-align: center;
-    color: #fe5a1d;
+    color: #000;
     display: block;
-    border-bottom: solid 3px #fe5a1d;
-    border-top: solid 3px #fe5a1d;
+    /* border-bottom: solid 3px #fe5a1d; */
+    /* border-top: solid 3px #fe5a1d; */
     padding: 4px 0;
 }
 .map-prev{
@@ -281,14 +319,25 @@ a{
 }
 
 /* attraction */
-.hero .part-title{
-    margin-top: 36px;
+.intro{
     text-align: center;
-    font-size: 24px;
-    border-bottom: solid 3px #333;
-    /* border-style: ridge; */
-
+    margin: 28px -16px 12px -16px;
 }
+.intro .part-title{
+    font-size: 32px;
+    background-color: rgba(252, 143, 106, 0.5);
+    border-left: solid 10px rgba(252, 143, 106, 1);
+    border-right: solid 10px rgba(252, 143, 106, 1);
+    /* border: solid 1px blue; */
+    line-height: 1.5;
+}
+.intro .part-subtitle{
+    margin-top: 6px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
 .attraction .attrc-place{
     /* border: solid 2px cyan; */
     margin: 32px 0;
@@ -342,7 +391,28 @@ a{
     line-height: 28px;
     text-align: justify;
 }
-/* attraction image */
+
+/* food */
+.food-item{
+    /* border: solid 1px limegreen; */
+    margin: 0 -6px;
+}
+.food-item .preview .food-name{
+    /* border: solid 1px red; */
+    margin: 6px 0;
+    font-size: 16px;
+    border-left: solid 3px red;
+    padding-left: 5px;
+}
+.food-item .preview .food-des{
+    /* border: solid 1px blue; */
+    margin-bottom: 8px;
+    font-size: 13px;
+    line-height: 1.2;
+    text-align: justify;
+}
+
+/* image */
 .img-container{
     width: 100%;
     /* border: solid 1px yellow; */
@@ -365,6 +435,9 @@ a{
 }
 .img-container .image.map{
     background-size: contain;
+}
+.img-container .food{
+    background-size: cover;
 }
 
 /* footer */
