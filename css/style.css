@@ -57,9 +57,13 @@ a{
     flex: auto;
     padding: 0 16px;
 }
+.food .row{
+    display: flex;
+    flex-wrap: wrap;
+}
 .food .col{
-    float: left;
     padding: 0 16px;
+    margin-bottom: 4px;
 }
 .col-lg-3{
     width: 25%;
@@ -171,16 +175,18 @@ a{
         right: 0;
         top: 0;
         width: 20%;
-        height: 360px;
+        height: 340px;
         z-index: 1000;
         background-color: rgba(255, 255, 255, 0.8);
 
         display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
         padding-top: 64px;
         
         opacity: 0;
         visibility: hidden;
+        /* border: solid 1px yellowgreen; */
         /* transition: all 0.3s; */
     }
     .navbar .nav-link{
@@ -196,6 +202,12 @@ a{
         visibility: visible;
     }
 }
+@media screen and (max-width: 540px) {
+    .navbar .nav{
+        width: 35%;
+    }
+
+}
 
 .navbar .menu-toggle{
     /* border: solid 1px #000; */
@@ -203,7 +215,7 @@ a{
     height: 50px;
     display: none;
     float: right;
-    margin-top: 7px;
+    margin-top: 8px;
 }
 @media screen and (max-width: 768px){
     .navbar .menu-toggle{
@@ -220,24 +232,28 @@ a{
     transform: translate(-50%, 0);
 }
 .navbar .menu-toggle span:nth-child(1){
-    top: 13px;
+    top: 14px;
+    height: 3px;
+
 }
 .navbar .menu-toggle span:nth-child(2){
-    top: 23px;
+    top: 25px;
 }
 .navbar .menu-toggle span:nth-child(3){
-    top: 33px;
+    top: 36px;
 }
 /* close btn */
 .navbar .close-btn{
     width: 50px;
     height: 50px;
-    border: solid 1px cyan;
+    /* border: solid 1px blue; */
+    background-color: #fff;
     display: none;
     position: absolute;
     right: 0;
     top: 0;
-    margin: 5px 14px 0 0;
+    margin-top: 8px;
+    margin-right: 16px;
 }
 @media screen and (max-width: 768px){
     .navbar .close-btn{
@@ -263,17 +279,24 @@ a{
 .jumbotron{
     margin-top: 64px;
     /* border: solid 1px rgb(255, 0, 255);   */
-    padding: 180px 0 140px ;
+    padding-top: 180px;
+    padding-bottom: 120px;
     background-image: url('../img/bg/osaka-jumbo.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center 65%;
 }
+@media screen and (max-width: 768px){
+    .jumbotron{
+        padding-top: 120px;
+        padding-bottom: 80px;
+}
+}
 .jumbotron h2{
     color: rgba(255, 174, 66, 1);
-    width: 320px;
-    height: 320px;
+    width: 280px;
+    height: 280px;
     margin: 0 auto;
     /* border: solid 1px yellow; */
     text-align: center;
@@ -281,6 +304,13 @@ a{
     justify-content: center;
     align-items: center;
     font-size: 80px;
+}
+@media screen and (max-width: 768px) {
+    .jumbotron h2{
+        width: 200px;
+        height: 200px;
+        font-size: 60px;
+    }
 }
 .mask{
     position: absolute;
@@ -293,9 +323,14 @@ a{
 
 /* Content */
 .hero{
-    padding: 24px 0;
+    padding: 40px 0;
     /* border: solid 1px limegreen; */
-    height: 100%;
+    /* height: 100%; */
+}
+@media screen and (max-width: 768px){
+    .hero{
+        padding: 20px 0;
+    }
 }
 .map .row{
     background-color: #efefef;
@@ -341,6 +376,7 @@ a{
     border-right: solid 10px rgba(252, 143, 106, 1);
     /* border: solid 1px blue; */
     line-height: 1.5;
+    margin: 24px 0;
 }
 .intro .part-subtitle{
     margin-top: 6px;
@@ -372,7 +408,7 @@ a{
 }
 .attrc-place .attrc-prev h4{
     font-size: 28px;
-    margin: 8px 0;
+    margin-top: 4px;
     /* border: solid 1px gray; */
     line-height: 40px;
     padding-left: 12px;
@@ -388,7 +424,8 @@ a{
     content: '';
     display: inline-block;
     width: 4px;
-    height: 36px;
+    height: 40px;
+    margin-top: 2px;
     background-color: #fe5a1d;
     
     position: absolute;
@@ -399,8 +436,9 @@ a{
 .attrc-parag{
     /* border: solid 1px pink; */
     font-size: 22px;
-    line-height: 28px;
+    line-height: 1.4;
     text-align: justify;
+    margin-top: -12px;
 }
 
 /* food */
@@ -411,15 +449,16 @@ a{
 .food-item .preview .food-name{
     /* border: solid 1px red; */
     margin: 6px 0;
-    font-size: 16px;
+    font-size: 20px;
     border-left: solid 3px red;
     padding-left: 5px;
 }
 .food-item .preview .food-des{
     /* border: solid 1px blue; */
+    padding: 0 3px;
     margin-bottom: 8px;
-    font-size: 13px;
-    line-height: 1.2;
+    font-size: 16px;
+    line-height: 1.25;
     text-align: justify;
 }
 
